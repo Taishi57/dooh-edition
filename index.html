@@ -46,20 +46,30 @@
         .text-min-12 { font-size: 12px; }
         .text-min-14 { font-size: 14px; }
 
+        /* スクロールアニメーション用スタイル */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 { transition-delay: 0.2s; }
+        .delay-2 { transition-delay: 0.4s; }
+        .delay-3 { transition-delay: 0.6s; }
+
         .footer { background-color: #080808; border-top: 1px solid rgba(255, 215, 0, 0.15); padding-top: 40px; padding-bottom: 30px; }
         .footer__container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
         .footer__container__top { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 32px; padding-bottom: 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); margin-bottom: 30px; }
-        
         .logo { display: flex; align-items: center; gap: 24px; }
         .logo__right { border-left: 1px solid rgba(255, 255, 255, 0.1); padding-left: 24px; }
         .logo__right__link { display: flex; flex-direction: column; gap: 4px; }
         .logo__right__text { font-size: 12px; color: #888; letter-spacing: 0.1em; }
-        
         .footer__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: flex-start; }
-        
         .footer__left { text-align: left; display: flex; flex-direction: column; gap: 12px; }
         .footer__sdgs-text { font-size: 12px; color: #666; line-height: 1.4; }
-        
         .footer__right { text-align: right; display: flex; flex-direction: column; gap: 12px; }
         .footer__info-links { display: flex; justify-content: flex-end; gap: 16px; font-size: 12px; }
         .footer__info-links a { color: #888; text-decoration: underline; }
@@ -94,19 +104,19 @@
     <!-- ヒーローセクション -->
     <header class="relative h-[85vh] flex items-center justify-center overflow-hidden hero-bg">
         <div class="relative z-20 text-center px-4 max-w-4xl">
-            <p class="section-title mb-4 text-white">セイビ堂 次世代型屋外LEDビジョン</p>
-            <div class="mb-4">
+            <p class="section-title mb-4 text-white reveal active">セイビ堂 次世代型屋外LEDビジョン</p>
+            <div class="mb-4 reveal active delay-1">
                 <img src="sled_vision.svg" alt="SLED VISION" class="h-12 md:h-16 mx-auto mb-4">
             </div>
-            <div class="flex items-center justify-center gap-4 mb-10">
+            <div class="flex items-center justify-center gap-4 mb-10 reveal active delay-2">
                 <span class="h-[1px] w-8 bg-white/40"></span>
                 <span class="text-2xl md:text-4xl font-light italic tracking-[0.2em] text-white serif uppercase">DOOH Edition</span>
                 <span class="h-[1px] w-8 bg-white/40"></span>
             </div>
-            <p class="text-min-14 md:text-[16px] font-light text-gray-100 mb-12 leading-relaxed max-w-2xl mx-auto text-center">
+            <p class="text-min-14 md:text-[16px] font-light text-gray-100 mb-12 leading-relaxed max-w-2xl mx-auto text-center reveal active delay-3">
                 新開発「レンズ付きLED」がもたらす圧倒的な省エネ性能と軽量化。本来分散される光を下方向へ集約させることで、少ない発光量でも高い視認性を維持し、屋外広告のランニングコストを劇的に改善します。
             </p>
-            <div class="flex flex-col md:flex-row gap-5 justify-center">
+            <div class="flex flex-col md:flex-row gap-5 justify-center reveal active delay-3">
                 <a href="#contact-cta" class="gold-bg text-black font-bold px-10 py-3 text-min-12 tracking-widest btn-hover">
                     お問い合わせ・資料請求
                 </a>
@@ -120,7 +130,7 @@
     <!-- 01. コンセプト -->
     <section id="about" class="py-24 px-6 md:px-20 bg-black">
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div>
+            <div class="reveal">
                 <p class="section-title mb-5">01. コンセプト</p>
                 <h3 class="text-2xl font-bold mb-8 serif leading-tight text-white text-left uppercase">
                     SLED VISION <br>
@@ -130,7 +140,7 @@
                     DOOH（Digital Out-of-Home）向けに特化した設計で、新開発の“レンズ付きLED”により、屋外に必要な明るさを確保しながら、従来比で大幅な省エネ・軽量化を実現したモデルです。特殊レンズが光を効率的に前方へ届けることで光害を抑制し、“省エネ × 軽量化 × 長寿命” を同時に実現する次世代構造を採用。都市景観に配慮しつつ広告価値を最大化する、屋外向けLEDディスプレイです。
                 </p>
             </div>
-            <div class="relative glass-card aspect-square rounded-sm overflow-hidden flex items-center justify-center border-white/20">
+            <div class="relative glass-card aspect-square rounded-sm overflow-hidden flex items-center justify-center border-white/20 reveal delay-1">
                 <img src="concept.png" alt="製品コンセプト" class="w-full h-full object-cover">
             </div>
         </div>
@@ -139,14 +149,14 @@
     <!-- 02. 特徴 -->
     <section id="features" class="py-24 px-6 md:px-20 bg-[#080808]">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal">
                 <p class="section-title mb-3">02. 特徴</p>
                 <h3 class="text-2xl font-bold serif italic gold-text tracking-widest text-center">革新的な3つのコア技術</h3>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- 電力効率 -->
-                <div class="glass-card p-8 relative">
+                <div class="glass-card p-8 relative reveal">
                     <div class="flex justify-between items-start mb-10">
                         <span class="text-3xl font-black text-white/30 serif italic leading-none">01</span>
                         <div class="w-8 h-8 gold-bg rounded-sm flex items-center justify-center text-black">
@@ -161,7 +171,7 @@
                 </div>
 
                 <!-- 軽量化設計 -->
-                <div class="glass-card p-8 relative">
+                <div class="glass-card p-8 relative reveal delay-1">
                     <div class="flex justify-between items-start mb-10">
                         <span class="text-3xl font-black text-white/30 serif italic leading-none">02</span>
                         <div class="w-8 h-8 gold-bg rounded-sm flex items-center justify-center text-black">
@@ -179,7 +189,7 @@
                 </div>
 
                 <!-- 製品寿命 -->
-                <div class="glass-card p-8 relative">
+                <div class="glass-card p-8 relative reveal delay-2">
                     <div class="flex justify-between items-start mb-10">
                         <span class="text-3xl font-black text-white/30 serif italic leading-none">03</span>
                         <div class="w-8 h-8 gold-bg rounded-sm flex items-center justify-center text-black">
@@ -200,17 +210,17 @@
     <section id="lens-tech" class="py-24 px-6 md:px-20 bg-black">
         <div class="max-w-5xl mx-auto">
             <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1 glass-card aspect-square rounded-sm overflow-hidden flex items-center justify-center border-white/10">
+                <div class="order-2 md:order-1 glass-card aspect-square rounded-sm overflow-hidden flex items-center justify-center border-white/10 reveal">
                     <img src="lens_compare.png" alt="配光制御レンズ構造比較" class="w-full h-full object-cover">
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="order-1 md:order-2 reveal delay-1">
                     <p class="section-title mb-5">03. 配光制御技術</p>
-                    <h3 class="text-2xl font-bold mb-8 serif leading-tight text-white text-left">
+                    <h3 class="text-2xl font-bold mb-8 serif leading-tight text-white text-left text-left">
                         特殊レンズによる<br>
                         <span class="gold-text uppercase">光害防止設計</span>
                     </h3>
                     <p class="text-gray-200 leading-loose mb-8 text-min-14 text-left">
-                        本来全方向に分散される光を、特殊レンズが「下方向」へ集中的に誘導。不要な光の拡散を抑えることで、周辺環境への配慮を実現しています。
+                        本来全方向に分散される光を、独自開発の特殊レンズが「下方向」へ集中的に誘導。不要な光の拡散を抑えることで、周辺環境への配慮を実現しています。
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-start gap-4 text-left">
@@ -231,13 +241,13 @@
     <!-- 04. 導入効果 -->
     <section id="comparison" class="py-24 px-6 md:px-20 bg-[#080808]">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal">
                 <p class="section-title mb-3">04. 導入効果</p>
                 <h3 class="text-2xl font-bold serif gold-text italic text-center">ビジュアル改善イメージ</h3>
             </div>
             <div class="grid md:grid-cols-2 gap-8 items-stretch">
                 <!-- BEFORE -->
-                <div class="bg-zinc-900 p-8 rounded-sm border border-white/30">
+                <div class="bg-zinc-900 p-8 rounded-sm border border-white/30 reveal">
                     <div class="flex justify-between mb-6">
                         <span class="text-min-12 font-bold tracking-widest text-zinc-300 bg-zinc-800 px-3 py-1 rounded-sm">BEFORE</span>
                         <span class="text-min-12 text-zinc-300 font-bold">従来のアナログ看板</span>
@@ -250,7 +260,7 @@
                     </p>
                 </div>
                 <!-- AFTER -->
-                <div class="bg-zinc-900/90 p-8 rounded-sm border-2 border-[#FFD700]">
+                <div class="bg-zinc-900/90 p-8 rounded-sm border-2 border-[#FFD700] reveal delay-1">
                     <div class="flex justify-between mb-6">
                         <span class="text-min-12 font-bold tracking-widest text-black gold-bg px-3 py-1 rounded-sm">AFTER</span>
                         <span class="text-min-12 text-[#FFD700] font-bold uppercase">DOOH Edition</span>
@@ -269,18 +279,18 @@
     <!-- 05. 信頼と保守 -->
     <section class="py-24 px-6 md:px-20 bg-black">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-12">
+            <div class="text-center mb-12 reveal">
                 <p class="section-title mb-5">05. 信頼と保守</p>
                 <h3 class="text-2xl font-bold mb-12 serif leading-tight text-white text-center">安心を支えるプロフェッショナル体制</h3>
             </div>
             <div class="grid md:grid-cols-2 gap-10">
-                <div class="p-8 border border-white/10 rounded-sm text-left">
+                <div class="p-8 border border-white/10 rounded-sm text-left reveal">
                     <h4 class="text-[#FFD700] font-bold mb-4">最長5年の長期製品保証</h4>
                     <p class="text-gray-400 text-min-12 leading-relaxed">
                         保証期間が5年と業界最長保証になっております。長期間にわたり安定したパフォーマンスを維持し、導入後も安心して運用いただけます。
                     </p>
                 </div>
-                <div class="p-8 border border-white/10 rounded-sm text-left">
+                <div class="p-8 border border-white/10 rounded-sm text-left reveal delay-1">
                     <h4 class="text-[#FFD700] font-bold mb-4">全国対応の保守・点検ネットワーク</h4>
                     <p class="text-gray-400 text-min-12 leading-relaxed">
                         緊急時の対応から定期点検まで一気通貫でサポート。万が一のトラブルにも迅速に対応し、ダウンタイムを最小限に抑えます。
@@ -293,11 +303,11 @@
     <!-- 06. 基本仕様 -->
     <section id="specifications" class="py-24 px-6 md:px-20 bg-[#080808]">
         <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-12">
+            <div class="text-center mb-12 reveal">
                 <p class="section-title mb-3">06. 基本仕様</p>
                 <h3 class="text-2xl font-bold serif gold-text italic text-white uppercase tracking-widest text-center">Specifications</h3>
             </div>
-            <div class="glass-card overflow-hidden border border-white/10 rounded-lg">
+            <div class="glass-card overflow-hidden border border-white/10 rounded-lg reveal delay-1">
                 <table class="w-full text-left text-min-12 border-collapse">
                     <thead>
                         <tr class="bg-white/5 border-b border-white/10">
@@ -346,7 +356,7 @@
 
     <!-- CTA セクション -->
     <section id="contact-cta" class="py-24 px-6 md:px-20 bg-black border-t border-white/10">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-4xl mx-auto text-center reveal">
             <h3 class="text-2xl md:text-3xl font-bold mb-8 serif text-white">LEDビジョン・デジタルサイネージをご検討のお客様</h3>
             <p class="text-gray-300 text-min-14 leading-loose mb-12 text-center">
                 ご紹介している製品以外にも多数取り扱いがございます。LEDビジョン、デジタルサイネージ、配信運用システム、行政への申請や現場施工、設置後の保守メンテナンスまでお問い合わせ、ご相談、お見積りなど承っております。電話、またはお問い合わせフォームどちらからでもお問い合わせください。
@@ -354,7 +364,7 @@
             
             <div class="grid md:grid-cols-2 gap-6 items-stretch">
                 <!-- メールお問い合わせ -->
-                <div class="flex flex-col">
+                <div class="flex flex-col reveal delay-1">
                     <p class="text-min-12 text-gray-400 mb-3 font-bold tracking-widest uppercase text-center">メールフォームでのお問い合わせ</p>
                     <a href="https://seibidou.jp/sledvision/contact/" class="gold-bg text-black font-black px-6 rounded-sm flex items-center justify-center gap-3 btn-hover text-lg h-16">
                         <i data-lucide="mail" class="w-5 h-5"></i>
@@ -362,7 +372,7 @@
                     </a>
                 </div>
                 <!-- 電話お問い合わせ -->
-                <div class="flex flex-col">
+                <div class="flex flex-col reveal delay-2">
                     <p class="text-min-12 text-gray-400 mb-3 font-bold tracking-widest uppercase text-center">お電話でのお問い合わせ</p>
                     <a href="tel:0120-997-310" class="border-2 border-[#D4AF37] text-[#D4AF37] font-black px-6 rounded-sm flex items-center justify-center gap-3 hover:bg-[#D4AF37]/10 transition-all text-2xl serif h-16">
                         <i data-lucide="phone" class="w-5 h-5"></i>
@@ -391,13 +401,11 @@
         </div>
         
         <div class="footer__grid">
-          <!-- 左側：SDGs -->
           <div class="footer__left">
             <img src="https://seibidou.jp/sledvision/wp-content/themes/mytheme/sledvision/assets/img/logo02.svg" width="140" height="18" alt="SDGs" class="footer__sdgs-logo">
             <p class="footer__sdgs-text">セイビ堂グループは「持続可能な開発目標」（SDGs）に賛同し、事業活動を通じ持続可能な社会実現に向けて真摯に取り組んでまいります。</p>
           </div>
           
-          <!-- 右側：規約・コピーライト -->
           <div class="footer__right">
             <div class="footer__info-links">
               <a href="https://seibidou.jp/company/" target="_blank">会社情報</a>
@@ -411,9 +419,28 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
+            // Lucideアイコンの初期化
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
+
+            // スクロールアニメーション (Intersection Observer)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
         });
     </script>
 </body>
