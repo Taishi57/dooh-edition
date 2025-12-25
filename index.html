@@ -90,6 +90,7 @@
         <a href="#" class="flex items-center">
             <img src="sled_vision.svg" alt="SLED VISION" class="h-5 w-auto">
         </a>
+        <!-- PC Navigation -->
         <div class="hidden md:flex gap-8 text-[12px] font-bold tracking-widest items-center">
             <a href="#about" class="hover:text-[#FFD700] transition-colors font-bold">製品概要</a>
             <a href="#features" class="hover:text-[#FFD700] transition-colors font-bold">製品の特長</a>
@@ -98,8 +99,25 @@
             <a href="#specifications" class="hover:text-[#FFD700] transition-colors font-bold">基本仕様</a>
             <a href="#contact-cta" class="gold-bg text-black px-5 py-2 rounded-sm btn-hover font-black">お問い合わせ</a>
         </div>
-        <i data-lucide="menu" class="md:hidden text-[#FFD700] w-5 h-5 cursor-pointer"></i>
+        <!-- Mobile Menu Toggle -->
+        <i data-lucide="menu" id="menu-btn" class="md:hidden text-[#FFD700] w-6 h-6 cursor-pointer"></i>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-black transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu" class="absolute top-6 right-6 text-[#FFD700]">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="mb-8">
+            <img src="sled_vision.svg" alt="SLED VISION" class="h-6 w-auto">
+        </div>
+        <a href="#about" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">製品概要</a>
+        <a href="#features" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">製品の特長</a>
+        <a href="#lens-tech" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">配光制御技術</a>
+        <a href="#comparison" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">導入効果</a>
+        <a href="#specifications" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">基本仕様</a>
+        <a href="#contact-cta" class="mobile-link gold-bg text-black px-8 py-3 rounded-sm font-black tracking-widest mt-4">お問い合わせ</a>
+    </div>
 
     <!-- ヒーローセクション -->
     <header class="relative h-[85vh] flex items-center justify-center overflow-hidden hero-bg">
@@ -116,10 +134,10 @@
                 レンズ付きLED採用、省エネ・軽量DOOH、セイビ堂の次世代型屋外LEDビジョン「SLED VISION DOOH EDITION」
             </p>
             <div class="flex flex-col md:flex-row gap-5 justify-center reveal active delay-3">
-                <a href="#contact-cta" class="gold-bg text-black font-bold px-10 py-3 text-min-12 tracking-widest btn-hover">
+                <a href="#contact-cta" class="gold-bg text-black font-bold px-10 py-3 text-min-12 tracking-widest btn-hover text-center">
                     お問い合わせ・資料請求
                 </a>
-                <a href="#features" class="border border-white/40 text-white px-10 py-3 text-min-12 tracking-widest hover:bg-white/10 transition-all font-bold">
+                <a href="#features" class="border border-white/40 text-white px-10 py-3 text-min-12 tracking-widest hover:bg-white/10 transition-all font-bold text-center">
                     製品の特長を見る
                 </a>
             </div>
@@ -214,7 +232,7 @@
                 </div>
                 <div class="order-1 md:order-2 reveal delay-1">
                     <p class="section-title mb-5">03. 配光制御技術</p>
-                    <h3 class="text-2xl font-bold mb-8 serif leading-tight text-white text-left text-left">
+                    <h3 class="text-2xl font-bold mb-8 serif leading-tight text-white text-left text-left text-left">
                         特殊レンズによる<br>
                         <span class="gold-text uppercase">光害防止設計</span>
                     </h3>
@@ -365,7 +383,7 @@
                 <!-- メールお問い合わせ -->
                 <div class="flex flex-col reveal delay-1">
                     <p class="text-min-12 text-gray-400 mb-3 font-bold tracking-widest uppercase text-center">メールフォームでのお問い合わせ</p>
-                    <a href="https://seibidou.jp/sledvision/contact/" class="gold-bg text-black font-black px-6 rounded-sm flex items-center justify-center gap-3 btn-hover text-lg h-16">
+                    <a href="https://seibidou.jp/sledvision/contact/" class="gold-bg text-black font-black px-6 rounded-sm flex items-center justify-center gap-3 btn-hover text-lg h-16 text-center">
                         <i data-lucide="mail" class="w-5 h-5"></i>
                         ご相談・お問い合わせ
                     </a>
@@ -373,7 +391,7 @@
                 <!-- 電話お問い合わせ -->
                 <div class="flex flex-col reveal delay-2">
                     <p class="text-min-12 text-gray-400 mb-3 font-bold tracking-widest uppercase text-center">お電話でのお問い合わせ</p>
-                    <a href="tel:0120-997-310" class="border-2 border-[#D4AF37] text-[#D4AF37] font-black px-6 rounded-sm flex items-center justify-center gap-3 hover:bg-[#D4AF37]/10 transition-all text-2xl serif h-16">
+                    <a href="tel:0120-997-310" class="border-2 border-[#D4AF37] text-[#D4AF37] font-black px-6 rounded-sm flex items-center justify-center gap-3 hover:bg-[#D4AF37]/10 transition-all text-2xl serif h-16 text-center">
                         <i data-lucide="phone" class="w-5 h-5"></i>
                         0120-997-310
                     </a>
@@ -393,7 +411,7 @@
             <div class="logo__right">
               <a href="https://seibidou.jp/sledvision/" class="logo__right__link">
                 <img src="https://seibidou.jp/sledvision/wp-content/themes/mytheme/sledvision/assets/img/logo.svg" width="200" height="22" alt="スレッドビジョンシリーズ">
-                <span class="logo__right__text text-left">スレッドビジョンシリーズ</span>
+                <span class="logo__right__text text-left text-left">スレッドビジョンシリーズ</span>
               </a>
             </div>
           </div>
@@ -421,6 +439,24 @@
             // Lucideアイコンの初期化
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
+            }
+
+            // モバイルメニュー制御
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('translate-x-full');
+            };
+
+            if (menuBtn && closeBtn && mobileMenu) {
+                menuBtn.addEventListener('click', toggleMenu);
+                closeBtn.addEventListener('click', toggleMenu);
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', toggleMenu);
+                });
             }
 
             // スクロールアニメーション (Intersection Observer)
