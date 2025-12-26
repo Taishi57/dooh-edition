@@ -46,7 +46,7 @@
         .text-min-12 { font-size: 12px; }
         .text-min-14 { font-size: 14px; }
 
-        /* スクロールアニメーション用スタイル */
+        /* スクロールアニメーション */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -58,7 +58,6 @@
         }
         .delay-1 { transition-delay: 0.2s; }
         .delay-2 { transition-delay: 0.4s; }
-        .delay-3 { transition-delay: 0.6s; }
 
         .footer { background-color: #080808; border-top: 1px solid rgba(255, 215, 0, 0.15); padding-top: 40px; padding-bottom: 30px; }
         .footer__container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
@@ -90,20 +89,17 @@
         <a href="#" class="flex items-center">
             <img src="sled_vision.svg" alt="SLED VISION" class="h-5 w-auto">
         </a>
-        <!-- PC Navigation -->
         <div class="hidden md:flex gap-8 text-[12px] font-bold tracking-widest items-center">
             <a href="#about" class="hover:text-[#FFD700] transition-colors font-bold">製品概要</a>
-            <a href="#features" class="hover:text-[#FFD700] transition-colors font-bold">製品の特長</a>
-            <a href="#lens-tech" class="hover:text-[#FFD700] transition-colors font-bold">配光制御技術</a>
+            <a href="#key-features" class="hover:text-[#FFD700] transition-colors font-bold">主要性能</a>
             <a href="#comparison" class="hover:text-[#FFD700] transition-colors font-bold">導入効果</a>
             <a href="#specifications" class="hover:text-[#FFD700] transition-colors font-bold">基本仕様</a>
             <a href="#contact-cta" class="gold-bg text-black px-5 py-2 rounded-sm btn-hover font-black">お問い合わせ</a>
         </div>
-        <!-- Mobile Menu Toggle -->
         <i data-lucide="menu" id="menu-btn" class="md:hidden text-[#FFD700] w-6 h-6 cursor-pointer"></i>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
+    <!-- モバイルメニュー -->
     <div id="mobile-menu" class="fixed inset-0 z-[60] bg-black transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center gap-8">
         <button id="close-menu" class="absolute top-6 right-6 text-[#FFD700]">
             <i data-lucide="x" class="w-8 h-8"></i>
@@ -112,8 +108,7 @@
             <img src="sled_vision.svg" alt="SLED VISION" class="h-6 w-auto">
         </div>
         <a href="#about" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">製品概要</a>
-        <a href="#features" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">製品の特長</a>
-        <a href="#lens-tech" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">配光制御技術</a>
+        <a href="#key-features" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">主要性能</a>
         <a href="#comparison" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">導入効果</a>
         <a href="#specifications" class="mobile-link text-xl font-bold hover:text-[#FFD700] tracking-widest">基本仕様</a>
         <a href="#contact-cta" class="mobile-link gold-bg text-black px-8 py-3 rounded-sm font-black tracking-widest mt-4">お問い合わせ</a>
@@ -130,15 +125,15 @@
                 <span class="text-2xl md:text-4xl font-light italic tracking-[0.2em] text-white serif uppercase">DOOH Edition</span>
                 <span class="h-[1px] w-8 bg-white/40"></span>
             </div>
-            <p class="text-min-14 md:text-[16px] font-light text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto text-center reveal active delay-2">
-                レンズ付きLED採用、省エネ・軽量DOOH、セイビ堂の次世代型屋外LEDビジョン「SLED VISION DOOH EDITION」
+            <p class="text-min-14 md:text-[18px] font-bold text-gray-100 mb-12 leading-relaxed max-w-5xl mx-auto text-center reveal active delay-2">
+                ＤＯＯＨに特化したシステムを兼ね備えたセイビ堂の次世代型屋外LEDビジョン「SLED VISION DOOH EDITION」
             </p>
-            <div class="flex flex-col md:flex-row gap-5 justify-center reveal active delay-3">
+            <div class="flex flex-col md:flex-row gap-5 justify-center reveal active delay-2">
                 <a href="#contact-cta" class="gold-bg text-black font-bold px-10 py-3 text-min-12 tracking-widest btn-hover text-center">
                     お問い合わせ・資料請求
                 </a>
-                <a href="#features" class="border border-white/40 text-white px-10 py-3 text-min-12 tracking-widest hover:bg-white/10 transition-all font-bold text-center">
-                    製品の特長を見る
+                <a href="#key-features" class="border border-white/40 text-white px-10 py-3 text-min-12 tracking-widest hover:bg-white/10 transition-all font-bold text-center">
+                    主要性能を見る
                 </a>
             </div>
         </div>
@@ -149,7 +144,7 @@
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="reveal">
                 <p class="section-title mb-5">01. コンセプト</p>
-                <h3 class="text-2xl font-bold mb-8 serif leading-tight text-white text-left uppercase">
+                <h3 class="text-2xl font-black mb-8 serif leading-tight text-white text-left uppercase">
                     SLED VISION <br>
                     <span class="gold-text">DOOH Edition</span>
                 </h3>
@@ -163,103 +158,86 @@
         </div>
     </section>
 
-    <!-- 02. 特徴 -->
-    <section id="features" class="py-24 px-6 md:px-20 bg-[#080808]">
+    <!-- 02. 主要性能 -->
+    <section id="key-features" class="py-24 px-6 md:px-20 bg-[#080808]">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <p class="section-title mb-3">02. 特徴</p>
-                <h3 class="text-2xl font-bold serif italic gold-text tracking-widest text-center">革新的な3つのコア技術</h3>
+            <div class="text-center mb-24 reveal">
+                <p class="section-title mb-3">02. 主要性能</p>
+                <h3 class="text-3xl font-black serif italic gold-text tracking-widest uppercase">Core Technologies</h3>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- 電力効率 -->
-                <div class="glass-card p-8 relative reveal">
-                    <div class="flex justify-between items-start mb-10">
-                        <span class="text-3xl font-black text-white/30 serif italic leading-none">01</span>
-                        <div class="w-8 h-8 gold-bg rounded-sm flex items-center justify-center text-black">
-                            <i data-lucide="zap" class="w-4 h-4"></i>
-                        </div>
+            <div class="space-y-16">
+                <!-- 01 電力効率 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center border-b border-white/10 pb-16 reveal">
+                    <div class="relative aspect-[4/3] rounded-sm overflow-hidden glass-card border-white/20">
+                        <img src="lens_compare.png" alt="配光制御レンズ構造" class="w-full h-full object-cover">
                     </div>
-                    <h4 class="text-min-12 font-bold mb-3 gold-text tracking-widest uppercase text-left">電力効率</h4>
-                    <p class="text-3xl font-black mb-4 serif tracking-tighter text-white text-left">50%<span class="text-min-14 ml-2 text-gray-400 font-normal">以上の削減</span></p>
-                    <p class="text-gray-300 text-min-12 leading-relaxed text-left">
-                        200W/㎡の高効率設計により、電気代と発熱を抑え、長時間運用でも安定した稼働を実現します。
-                    </p>
-                </div>
-
-                <!-- 軽量化設計 -->
-                <div class="glass-card p-8 relative reveal delay-1">
-                    <div class="flex justify-between items-start mb-10">
-                        <span class="text-3xl font-black text-white/30 serif italic leading-none">02</span>
-                        <div class="w-8 h-8 gold-bg rounded-sm flex items-center justify-center text-black">
-                            <i data-lucide="feather" class="w-4 h-4"></i>
-                        </div>
-                    </div>
-                    <h4 class="text-min-12 font-bold mb-3 gold-text tracking-widest uppercase text-left">軽量化設計</h4>
-                    <div class="flex items-baseline gap-2 mb-4">
-                        <p class="text-3xl font-black serif tracking-tighter text-white text-left">20kg / ㎡</p>
-                        <span class="text-min-12 text-gray-400 font-normal">(50%軽量化)</span>
-                    </div>
-                    <p class="text-gray-300 text-min-12 leading-relaxed text-left">
-                        本体重量を抑えることで、設置条件の幅を広げ、施工やメンテナンスの負担を軽減します。
-                    </p>
-                </div>
-
-                <!-- 製品寿命 -->
-                <div class="glass-card p-8 relative reveal delay-2">
-                    <div class="flex justify-between items-start mb-10">
-                        <span class="text-3xl font-black text-white/30 serif italic leading-none">03</span>
-                        <div class="w-8 h-8 gold-bg rounded-sm flex items-center justify-center text-black">
-                            <i data-lucide="clock" class="w-4 h-4"></i>
-                        </div>
-                    </div>
-                    <h4 class="text-min-12 font-bold mb-3 gold-text tracking-widest uppercase text-left">製品寿命</h4>
-                    <p class="text-3xl font-black mb-4 serif tracking-tighter text-white text-left">160,000<span class="text-min-14 ml-2 text-gray-400 font-normal">時間</span></p>
-                    <p class="text-gray-300 text-min-12 leading-relaxed text-left">
-                        従来比約4倍の長寿命。低消費電力運用によりLEDチップへの負荷を軽減し、長期運用時のコストを抑えます。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 03. 配光制御技術 -->
-    <section id="lens-tech" class="py-24 px-6 md:px-20 bg-black">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1 glass-card aspect-square rounded-sm overflow-hidden flex items-center justify-center border-white/10 reveal">
-                    <img src="lens_compare.png" alt="配光制御レンズ構造比較" class="w-full h-full object-cover">
-                </div>
-                <div class="order-1 md:order-2 reveal delay-1">
-                    <p class="section-title mb-5">03. 配光制御技術</p>
-                    <h3 class="text-2xl font-bold mb-8 serif leading-tight text-white text-left text-left text-left">
-                        特殊レンズによる<br>
-                        <span class="gold-text uppercase">光害防止設計</span>
-                    </h3>
-                    <p class="text-gray-200 leading-loose mb-8 text-min-14 text-left">
-                        本来全方向に分散される光を、独自開発の特殊レンズが「下方向」へ集中的に誘導。不要な光の拡散を抑えることで、周辺環境への配慮を実現しています。
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4 text-left">
-                            <div class="w-10 h-10 gold-bg rounded-sm flex-shrink-0 flex items-center justify-center text-black">
-                                <i data-lucide="zap-off" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <p class="text-white font-bold text-min-14">消費電力を大幅カット</p>
-                                <p class="text-gray-400 text-min-12 text-left">光を下方へ集約することで、通常の半分以下の電力でも鮮明な視認性を確保します。</p>
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="text-5xl font-black text-white/20 serif italic leading-none">01</span>
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <i data-lucide="zap" class="w-5 h-5 text-[#FFD700]"></i>
+                                    <h4 class="text-2xl font-black gold-text tracking-widest uppercase serif">電力効率：50%以上の削減</h4>
+                                </div>
                             </div>
                         </div>
+                        <p class="text-gray-300 text-min-14 leading-relaxed">
+                            200W/㎡の高効率設計により、電気代と発熱を抑え、長時間運用でも安定した稼働を実現します。独自開発の特殊レンズが「下方向」へ光を集中的に誘導することで、本来全方向に分散される光を効率的にまとめ、少ない発光量でも高い体感輝度を確保し、消費電力を従来の半分まで削減します。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 02 軽量化設計 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center border-b border-white/10 pb-16 reveal">
+                    <div class="order-1 md:order-2 relative aspect-[4/3] rounded-sm overflow-hidden glass-card border-white/20">
+                        <img src="light.png" alt="軽量化設計" class="w-full h-full object-cover">
+                    </div>
+                    <div class="order-2 md:order-1">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="text-5xl font-black text-white/20 serif italic leading-none">02</span>
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <i data-lucide="feather" class="w-5 h-5 text-[#FFD700]"></i>
+                                    <h4 class="text-2xl font-black gold-text tracking-widest uppercase serif">驚異的な軽量化設計</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-min-14 leading-relaxed">
+                            本体重量を20kg/㎡まで抑えることで、設置条件の幅を広げ、施工やメンテナンスの負担を軽減します。既存のアナログ看板の支柱をそのまま活用したデジタル化が可能になり、大規模な補強工事コストを大幅に削減。既存ビル壁面への設置ハードルを劇的に下げます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 03 製品寿命 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+                    <div class="relative aspect-[4/3] rounded-sm overflow-hidden glass-card border-white/20">
+                        <img src="lifespan.png" alt="製品寿命" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="text-5xl font-black text-white/20 serif italic leading-none">03</span>
+                            <div class="flex flex-col">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <i data-lucide="clock" class="w-5 h-5 text-[#FFD700]"></i>
+                                    <h4 class="text-2xl font-black gold-text tracking-widest uppercase serif">圧倒的な製品寿命</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-min-14 leading-relaxed">
+                            16万時間という圧倒的なライフサイクルを実現。長寿命設計により、交換や修理の頻度を減らし、長期運用時のコストを抑えます。低消費電力運用によりLEDチップへの負荷を軽減し、長期にわたる資産価値を維持します。
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 04. 導入効果 -->
-    <section id="comparison" class="py-24 px-6 md:px-20 bg-[#080808]">
+    <!-- 03. 導入効果 -->
+    <section id="comparison" class="py-24 px-6 md:px-20 bg-black">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16 reveal">
-                <p class="section-title mb-3">04. 導入効果</p>
+                <p class="section-title mb-3">03. 導入効果</p>
                 <h3 class="text-2xl font-bold serif gold-text italic text-center">ビジュアル改善イメージ</h3>
             </div>
             <div class="grid md:grid-cols-2 gap-8 items-stretch">
@@ -293,11 +271,11 @@
         </div>
     </section>
 
-    <!-- 05. 信頼と保守 -->
-    <section class="py-24 px-6 md:px-20 bg-black">
+    <!-- 04. 信頼と保守 -->
+    <section class="py-24 px-6 md:px-20 bg-[#080808]">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12 reveal">
-                <p class="section-title mb-5">05. 信頼と保守</p>
+                <p class="section-title mb-5">04. 信頼と保守</p>
                 <h3 class="text-2xl font-bold mb-12 serif leading-tight text-white text-center">安心を支えるプロフェッショナル体制</h3>
             </div>
             <div class="grid md:grid-cols-2 gap-10">
@@ -317,11 +295,11 @@
         </div>
     </section>
 
-    <!-- 06. 基本仕様 -->
-    <section id="specifications" class="py-24 px-6 md:px-20 bg-[#080808]">
+    <!-- 05. 基本仕様 -->
+    <section id="specifications" class="py-24 px-6 md:px-20 bg-black">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-12 reveal">
-                <p class="section-title mb-3">06. 基本仕様</p>
+                <p class="section-title mb-3">05. 基本仕様</p>
                 <h3 class="text-2xl font-bold serif gold-text italic text-white uppercase tracking-widest text-center">Specifications</h3>
             </div>
             <div class="glass-card overflow-hidden border border-white/10 rounded-lg reveal delay-1">
@@ -372,7 +350,7 @@
     </section>
 
     <!-- CTA セクション -->
-    <section id="contact-cta" class="py-24 px-6 md:px-20 bg-black border-t border-white/10">
+    <section id="contact-cta" class="py-24 px-6 md:px-20 bg-[#0f0f0f] border-t border-white/10">
         <div class="max-w-4xl mx-auto text-center reveal">
             <h3 class="text-2xl md:text-3xl font-bold mb-8 serif text-white">LEDビジョン・デジタルサイネージをご検討のお客様</h3>
             <p class="text-gray-300 text-min-14 leading-loose mb-12 text-center">
@@ -380,7 +358,6 @@
             </p>
             
             <div class="grid md:grid-cols-2 gap-6 items-stretch">
-                <!-- メールお問い合わせ -->
                 <div class="flex flex-col reveal delay-1">
                     <p class="text-min-12 text-gray-400 mb-3 font-bold tracking-widest uppercase text-center">メールフォームでのお問い合わせ</p>
                     <a href="https://seibidou.jp/sledvision/contact/" class="gold-bg text-black font-black px-6 rounded-sm flex items-center justify-center gap-3 btn-hover text-lg h-16 text-center">
@@ -388,7 +365,6 @@
                         ご相談・お問い合わせ
                     </a>
                 </div>
-                <!-- 電話お問い合わせ -->
                 <div class="flex flex-col reveal delay-2">
                     <p class="text-min-12 text-gray-400 mb-3 font-bold tracking-widest uppercase text-center">お電話でのお問い合わせ</p>
                     <a href="tel:0120-997-310" class="border-2 border-[#D4AF37] text-[#D4AF37] font-black px-6 rounded-sm flex items-center justify-center gap-3 hover:bg-[#D4AF37]/10 transition-all text-2xl serif h-16 text-center">
@@ -436,35 +412,22 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            // Lucideアイコンの初期化
             if (typeof lucide !== 'undefined') {
                 lucide.createIcons();
             }
 
-            // モバイルメニュー制御
             const mobileMenu = document.getElementById('mobile-menu');
             const menuBtn = document.getElementById('menu-btn');
             const closeBtn = document.getElementById('close-menu');
             const mobileLinks = document.querySelectorAll('.mobile-link');
 
-            const toggleMenu = () => {
-                mobileMenu.classList.toggle('translate-x-full');
-            };
+            const toggleMenu = () => mobileMenu.classList.toggle('translate-x-full');
 
             if (menuBtn && closeBtn && mobileMenu) {
                 menuBtn.addEventListener('click', toggleMenu);
                 closeBtn.addEventListener('click', toggleMenu);
-                mobileLinks.forEach(link => {
-                    link.addEventListener('click', toggleMenu);
-                });
+                mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
             }
-
-            // スクロールアニメーション (Intersection Observer)
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -472,10 +435,9 @@
                         entry.target.classList.add('active');
                     }
                 });
-            }, observerOptions);
+            }, { threshold: 0.1 });
 
-            const revealElements = document.querySelectorAll('.reveal');
-            revealElements.forEach(el => observer.observe(el));
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         });
     </script>
 </body>
