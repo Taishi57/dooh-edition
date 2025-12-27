@@ -29,7 +29,7 @@
         }
 
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,1)), url('top.png');
+            background: linear-gradient(rgba(0,0,0,0.75) 85%,rgba(0,0,0,1)), url('top.png');
             background-size: cover;
             background-position: center;
             background-color: #000;
@@ -58,6 +58,7 @@
         }
         .delay-1 { transition-delay: 0.2s; }
         .delay-2 { transition-delay: 0.4s; }
+        .delay-3 { transition-delay: 0.6s; }
 
         .footer { background-color: #080808; border-top: 1px solid rgba(255, 215, 0, 0.15); padding-top: 40px; padding-bottom: 30px; }
         .footer__container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
@@ -125,9 +126,26 @@
                 <span class="text-2xl md:text-4xl font-light italic tracking-[0.2em] text-white serif uppercase">DOOH Edition</span>
                 <span class="h-[1px] w-8 bg-white/40"></span>
             </div>
-            <p class="text-min-14 md:text-[18px] font-bold text-gray-100 mb-12 leading-relaxed max-w-5xl mx-auto text-center reveal active delay-2">
+            <p class="text-min-14 md:text-[18px] font-bold text-gray-100 mb-6 leading-relaxed max-w-5xl mx-auto text-center reveal active delay-2">
                 ＤＯＯＨに特化したシステムを兼ね備えたセイビ堂の次世代型屋外LEDビジョン「SLED VISION DOOH EDITION」
             </p>
+            
+            <!-- アイコン行のサイズを拡大 -->
+            <div class="flex flex-wrap justify-center gap-8 text-white font-bold text-[16px] md:text-[18px] mb-12 reveal active delay-2">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="zap" class="w-5 h-5 text-[#FFD700]"></i>
+                    <span>省エネ</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="feather" class="w-5 h-5 text-[#FFD700]"></i>
+                    <span>軽量</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="clock" class="w-5 h-5 text-[#FFD700]"></i>
+                    <span>長寿命</span>
+                </div>
+            </div>
+
             <div class="flex flex-col md:flex-row gap-5 justify-center reveal active delay-2">
                 <a href="#contact-cta" class="gold-bg text-black font-bold px-10 py-3 text-min-12 tracking-widest btn-hover text-center">
                     お問い合わせ・資料請求
@@ -387,7 +405,7 @@
             <div class="logo__right">
               <a href="https://seibidou.jp/sledvision/" class="logo__right__link">
                 <img src="https://seibidou.jp/sledvision/wp-content/themes/mytheme/sledvision/assets/img/logo.svg" width="200" height="22" alt="スレッドビジョンシリーズ">
-                <span class="logo__right__text text-left text-left">スレッドビジョンシリーズ</span>
+                <span class="logo__right__text text-left">スレッドビジョンシリーズ</span>
               </a>
             </div>
           </div>
